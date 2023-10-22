@@ -1,0 +1,7 @@
+version: '3'
+services:
+  hello-world-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: hello-world-app
