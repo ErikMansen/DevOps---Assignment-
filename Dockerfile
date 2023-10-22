@@ -1,5 +1,5 @@
 # Start from the base Alpine image
-FROM alpine:latest
+FROM alpine:3.18.4
 
 # Install OpenJDK 11 and Python3
 RUN apk update && \
@@ -12,7 +12,7 @@ COPY HelloWorld.java .
 RUN javac HelloWorld.java
 
 # Add the Hello World Python program
-COPY HelloWorld.py /app/
+COPY HelloWorld.py .
 
 # Use a single CMD instruction to run both programs
 CMD java HelloWorld && python3 HelloWorld.py
